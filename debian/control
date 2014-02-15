@@ -11,7 +11,8 @@ Vcs-Browser: http://cvs.synchro.net/cgi-bin/viewcvs.cgi/
 
 Package: syncterm
 Architecture: i386 amd64
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, libncurses (>= 5.9),
+ libsdl2-2.0-0 (>= 2.0.1)
 Description: SyncTERM is a BBS terminal program
  SyncTERM is a BBS terminal program which supports:
   Windows 95/98/ME/NT/2000/XP, Linux, OpenBSD, NetBSD, OS X, and FreeBSD
