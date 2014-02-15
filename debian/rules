@@ -8,5 +8,5 @@ export DH_VERBOSE=1
 	dh $@ 
 
 override_dh_auto_install:
-	$(MAKE) -C src/syncterm PREFIX=$$(pwd)/debian/syncterm/usr install
+	$(MAKE) -C src/syncterm USE_SDL=1 PREFIX=$$(pwd)/debian/syncterm/usr install
 
