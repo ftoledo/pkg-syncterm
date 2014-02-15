@@ -1,0 +1,43 @@
+Source: syncterm
+Section: comm
+Priority: optional
+Maintainer: Fernando Toledo <ragnarok@docksud.com.ar>
+Build-Depends: debhelper (>= 8.0.0), libncurses5-dev (>= 5.9),
+ unzip (>= 6.0), libsdl2-dev (>= 2.0.1)
+Standards-Version: 3.9.4
+Homepage: http://syncterm.bbsdev.net/
+Vcs-Git: https://github.com/ftoledo/pkg-syncterm.git
+Vcs-Browser: http://cvs.synchro.net/cgi-bin/viewcvs.cgi/
+
+Package: syncterm
+Architecture: i386 amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: SyncTERM is a BBS terminal program
+ SyncTERM is a BBS terminal program which supports:
+  Windows 95/98/ME/NT/2000/XP, Linux, OpenBSD, NetBSD, OS X, and FreeBSD
+  X/Y/ZModem up/downloads
+  Runs in full-screen mode on ALL platforms (ALT-Enter switches modes)
+  *nix versions will run using SDL, X11, or using curses
+  Full ANSI-BBS support
+  Full CGTerm Commodore 64 PETSCII support
+  Full Atari 8-bit ATASCII support
+  DoorWay support
+  Support for IBM low and high ASCII including the face graphics (☺ and ☻) and 
+  card symbols (♥, ♦, ♣, and ♠) which so many other terms have problems 
+  with (may not work in curses mode... depends on the terminal being used).
+  Phone books
+  Multiple screen modes (80x25, 80x28, 80x43, 80x50, 80x60, 132x25, 
+  132x28, 132x30, 132x34, 132x43, 132x50, 132x60)
+  ANSI Music (through the sound card if installed)
+  Telnet, RLogin, SSH, RAW, modem, and direct serial connections
+  Auto-login with Synchronet RLogin
+  Large Scrollback
+  Mouse-driven menus
+  Copy/Paste
+  Supports character pacing for ANSI animation as well as the 
+  VT500 ESC[*r sequence to allow dynamic speed changes
+  Comes with 37 standard fonts and allows the BBS to change the current 
+  font *and* upload custom fonts. This tool will allow you to create fonts 
+  for use with SyncTERM.
+  Supports Operation Overkill ][ Terminal emulation
+
