@@ -1,10 +1,8 @@
 syncterm for Debian
 -------------------
 
-<this file describes information about the source package, see Debian policy
-manual section 4.14. You WILL either need to modify or delete this file>
+SyncTerm is part of Synchronet BBS source code. It's depends of 3rd party libraries
+that are include in the release tarball.
 
-
-
- -- Toledones <toledones@gollum>  Sat, 15 Feb 2014 01:09:26 -0300
+ -- Fernando Toledo <ragnarok@docksud.com.ar>  Sat, 15 Feb 2014 01:09:26 -0300
 

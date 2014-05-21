@@ -1,6 +1,7 @@
 syncterm for Debian
 -------------------
 
-<possible notes regarding this package - if none, delete this file>
+First release, testing packaging into debian.
+This version was buld without cryptlib due doubts that the license has the ssh code.
 
- -- Toledones <toledones@gollum>  Sat, 15 Feb 2014 01:09:26 -0300
+ -- Fernando Toledo <ragnarok@docksud.com.ar>  Sat, 15 Feb 2014 01:09:26 -0300

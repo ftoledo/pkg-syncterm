@@ -3,19 +3,20 @@ Upstream-Name: syncterm
 Source: http://syncterm.bbsdev.net/
 
 Files: *
-Some parts of this program are covered under other licences.
-The files in the comio, conio, smblib, uifc, and xpdev are covered under
-the LGPL.
-
-The files sbbs3/zmodem.h and sbbs3/zmodem.c are derived from the
-zmtx/zmrx package available at
-ftp://ftp.netsw.org/net/modem/protocols/zmodem/zmtx-zmrx/
-
-The licence contained in the archive is:
-
-MCS allows you to use and copy/modify this source under the following
-conditions:
-
+Copyright: Some parts of this program are covered under other licences.
+License: LGPL
+ The files in the comio, conio, smblib, uifc, and xpdev are covered under
+ the LGPL.
+ .
+ The files sbbs3/zmodem.h and sbbs3/zmodem.c are derived from the
+ zmtx/zmrx package available at
+ ftp://ftp.netsw.org/net/modem/protocols/zmodem/zmtx-zmrx/
+ .
+ The licence contained in the archive is:
+ .
+ MCS allows you to use and copy/modify this source under the following
+ conditions:
+ .
   - MCS or Jacques Mattheij shall not be liable for any damages arising
     from the use of this code
   - the archive must be distributed as a whole leaving version numbers intact.
@@ -24,11 +25,11 @@ conditions:
     the beginning
   - you will not use this software for commercial purposes.
     (commercial licenses are available contact us for info)
-
-As such, this program may not be redistributable.  YOU HAVE BEEN WARNED!
-
-If anyone can put me (shurd@sasktel.net) in contact with the authours,
-that would be greatly appreciated.
+ .
+ As such, this program may not be redistributable.  YOU HAVE BEEN WARNED!
+ .
+ If anyone can put me (shurd@sasktel.net) in contact with the authours,
+ that would be greatly appreciated.
 
 Files: debian/*
 Copyright: 2014 Fernando Toledo <ragnarok@docksud.com.ar>
@@ -49,7 +50,3 @@ License: GPL-2+
  On Debian systems, the complete text of the GNU General
  Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
 
-# Please also look if there are files or directories which have a
-# different copyright/license attached and list them here.
-# Please avoid to pick license terms that are more restrictive than the
-# packaged work, as it may make Debian's contributions unacceptable upstream.
