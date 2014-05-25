@@ -3,7 +3,7 @@ Section: comm
 Priority: optional
 Maintainer: Fernando Toledo <ragnarok@docksud.com.ar>
 Build-Depends: debhelper (>= 9), libncurses5-dev (>= 5.9),
- unzip (>= 6.0), libsdl2-dev (>= 2.0.2)
+ unzip (>= 6.0), libsdl2-dev (>= 2.0.2), libsdl1.2-dev (>= 1.2.15)
 Standards-Version: 3.9.5
 Homepage: http://syncterm.bbsdev.net/
 Vcs-Git: https://github.com/ftoledo/pkg-syncterm.git
@@ -12,7 +12,7 @@ Vcs-Browser: http://cvs.synchro.net/cgi-bin/viewcvs.cgi/
 Package: syncterm
 Architecture: i386 amd64
 Depends: ${shlibs:Depends}, ${misc:Depends}, libncurses5 (>= 5.9),
- libsdl2-2.0-0 (>= 2.0.2)
+ libsdl2-2.0-0 (>= 2.0.2), libsdl1.2debian (>= 1.2.15)
 Description: BBS terminal program from Synchronet
  SyncTERM is a BBS terminal program which supports:
   Windows 95/98/ME/NT/2000/XP, Linux, OpenBSD, NetBSD, OS X, and FreeBSD
@@ -46,7 +46,7 @@ Package: syncterm-dbg
 Section: debug
 Architecture: i386 amd64
 Depends: ${shlibs:Depends}, ${misc:Depends}, libncurses5 (>= 5.9),
- libsdl2-2.0-0 (>= 2.0.2)
+ libsdl2-dbg (>= 2.0.2), libsdl1.2-dbg (>= 1.2.15)
 Description: BBS terminal program from Synchronet
  SyncTERM is a BBS terminal program which supports:
   Windows 95/98/ME/NT/2000/XP, Linux, OpenBSD, NetBSD, OS X, and FreeBSD
