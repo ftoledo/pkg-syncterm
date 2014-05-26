@@ -1,6 +1,8 @@
 syncterm (20140525-1) unstable; urgency=medium
 
   * new upstream release
+  * debug packages depends 
+  * debug package should be extra priority (lintian)
 
  -- Fernando Toledo <ragnarok@docksud.com.ar>  Sun, 25 May 2014 22:11:58 -0300
 
