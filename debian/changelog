@@ -1,3 +1,9 @@
+syncterm (20140525-1) unstable; urgency=medium
+
+  * new upstream release
+
+ -- Fernando Toledo <ragnarok@docksud.com.ar>  Sun, 25 May 2014 22:11:58 -0300
+
 syncterm (20140108-1) unstable; urgency=low
 
   * Initial release (Closes: #739035) 
