@@ -47,7 +47,8 @@ Section: debug
 Priority: extra
 Architecture: i386 amd64
 Depends: ${shlibs:Depends}, ${misc:Depends}, libncurses5-dbg (>= 5.9),
- libsdl2-dbg (>= 2.0.2), libsdl1.2-dbg (>= 1.2.15)
+ libsdl2-dbg (>= 2.0.2), libsdl1.2-dbg (>= 1.2.15), 
+ syncterm (= ${binary:Version})
 Description: BBS terminal program from Synchronet
  SyncTERM is a BBS terminal program which supports:
   Windows 95/98/ME/NT/2000/XP, Linux, OpenBSD, NetBSD, OS X, and FreeBSD
