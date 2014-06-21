@@ -1,3 +1,10 @@
+syncterm (20140620-1) unstable; urgency=medium
+
+  * update from upstream (Fri Jun 20 2014 02:58:43 (not
+    release yet, but daily sources)
+
+ -- Fernando Toledo <ragnarok@docksud.com.ar>  Sat, 21 Jun 2014 00:02:56 -0300
+
 syncterm (20140525-1) unstable; urgency=medium
 
   * new upstream release
