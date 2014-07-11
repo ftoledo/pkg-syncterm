@@ -1,0 +1,11 @@
+--- syncterm-20140108/src/syncterm/syncterm.desktop.orig	2014-07-11 15:20:47.012885730 -0300
++++ syncterm-20140108/src/syncterm/syncterm.desktop	2014-07-11 15:26:53.284893516 -0300
+@@ -2,6 +2,8 @@
+ Type=Application
+ Name=SyncTERM
+ Comment=ANSI-BBS Terminal
++Comment[es]=Emulador de Terminal ANSI-BBS
+ Icon=syncterm.png
+ Exec=syncterm %u
+ Categories=Application;Network;
++Keywords=BBS;Terminal;Ansi;

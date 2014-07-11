@@ -1,3 +1,9 @@
+syncterm (20140620-2) unstable; urgency=medium
+
+  * lintian overrides
+
+ -- Fernando Toledo <ragnarok@docksud.com.ar>  Fri, 11 Jul 2014 15:41:35 -0300
+
 syncterm (20140620-1) unstable; urgency=medium
 
   * update from upstream (Fri Jun 20 2014 02:58:43 (not
