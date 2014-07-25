@@ -1,7 +1,8 @@
 syncterm (20140716-1) unstable; urgency=medium
 
   * new daily tarball
-  * fix lintian keywords warning
+  * fix lintian keywords warning (upstream accepted)
+  * fix clean rules to rebuild package
 
  -- Fernando Toledo <ragnarok@docksud.com.ar>  Wed, 16 Jul 2014 14:36:16 -0300
 
