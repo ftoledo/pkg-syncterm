@@ -7,6 +7,29 @@ export DH_VERBOSE=1
 CFLAGS = `dpkg-buildflags --get CFLAGS`
 CFLAGS += `dpkg-buildflags --get CPPFLAGS`
 
+gcc_machine   := $(shell ${CC} -dumpmachine)
+ifeq ($(gcc_machine),mingw32)
+ os   := Win32
+endif
+ifndef os
+ os   :=  $(shell uname)
+endif
+os      :=  $(shell echo $(os) | tr '[A-Z]' '[a-z]' | tr ' ' '_')
+
+machine   :=  $(shell if uname -m | egrep -v "(i[3456789]*|x)86" > /dev/null; then uname -m | tr "[A-Z]" "[a-z]" | tr " " "_" ; fi)
+machine   :=  $(shell if uname -m | egrep "64" > /dev/null; then uname -m | tr "[A-Z]" "[a-z]" | tr " " "_" ; else echo $(machine) ; fi)
+ifeq ($(os),darwin)
+ ifeq ("$(machine)","")
+  ifeq ($(shell sysctl hw.optional.x86_64),hw.optional.x86_64: 1)
+   machine  := x86_64
+  endif
+ endif
+endif
+
+ifeq ($(machine),x86_64)
+ machine  := x64
+endif
+
 %:
 	dh $@ 
 
@@ -21,3 +44,18 @@ override_dh_auto_install:
 
 override_dh_strip:
 	dh_strip --dbg-package=syncterm-dbg
+
+override_dh_auto_clean:
+	dh_clean
+	rm -rf 3rdp/gcc.$(os).$(machine).debug
+	rm -rf 3rdp/src/cl
+	rm -rf src/conio/gcc.$(os).$(machine).lib.debug
+	rm -rf src/conio/gcc.$(os).$(machine).obj.debug-mt
+	rm -rf src/syncterm/gcc.$(os).$(machine).exe.debug
+	rm -rf src/syncterm/gcc.$(os).$(machine).obj.debug-mt
+	rm -rf src/uifc/gcc.$(os).$(machine).lib.debug
+	rm -rf src/uifc/gcc.$(os).$(machine).obj.debug-mt
+	rm -rf src/xpdev/gcc.$(os).$(machine).lib.debug
+	rm -rf src/xpdev/gcc.$(os).$(machine).obj.debug
+	rm -rf src/xpdev/gcc.$(os).$(machine).obj.debug-mt
+	rm -f src/syncterm/syncterm.1.gz

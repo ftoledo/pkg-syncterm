@@ -1,3 +1,10 @@
+syncterm (20140716-1) unstable; urgency=medium
+
+  * new daily tarball
+  * fix lintian keywords warning
+
+ -- Fernando Toledo <ragnarok@docksud.com.ar>  Wed, 16 Jul 2014 14:36:16 -0300
+
 syncterm (20140620-2) unstable; urgency=medium
 
   * lintian overrides
