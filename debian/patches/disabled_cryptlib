@@ -1,0 +1,61 @@
+Description: Disable cryptlib
+ Sycnterm has ssh protocol support from cryplib
+ To avoid license problems we strip cryptlib from original source and build
+ SyncTerm without it.
+Author: Fernando Toledo <ragnarok@docksud.com.ar>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+--- syncterm-20141009.orig/3rdp/build/Common.gmake
++++ syncterm-20141009/3rdp/build/Common.gmake
+@@ -47,9 +47,10 @@ endif
+ 3RDPBUILDDIR :=	$(3RDP_ROOT)/build
+ JS_SRC :=	$(3RDP_ROOT)/src/mozjs
+ JS_IDIR :=	$(3RDPODIR)/mozjs
++ifndef WITHOUT_CRYPTLIB
+ CRYPT_SRC :=	$(3RDP_ROOT)/src/cl
+ CRYPT_IDIR :=	$(3RDPODIR)/cl
+-
++endif
+ ############
+ # JS Stuff #
+ ############
+@@ -106,7 +107,7 @@ endif
+ ##################
+ # Cryptlib Stuff #
+ ##################
+-
++ifndef WITHOUT_CRYPTLIB
+ ifdef CRYPTLIBINCLUDE
+  CRYPTLIB_NOBUILD:=1
+ else
+@@ -137,4 +138,4 @@ endif
+ ifdef CRYPTLIBDIR
+  CRYPT_LDFLAGS += -L$(CRYPTLIBDIR)
+ endif
+-
++endif
+--- syncterm-20141009.orig/3rdp/build/GNUmakefile
++++ syncterm-20141009/3rdp/build/GNUmakefile
+@@ -27,7 +27,7 @@ ifeq ($(shell perl -e 'print "$(machine)
+  endif
+ endif
+ 
+-.PHONY: cryptlib libmozjs
++.PHONY: libmozjs
+ cryptlib: $(CRYPTLIB_BUILD)
+ libmozjs: $(JSLIB_BUILD)
+ 
+--- syncterm-20141009.orig/src/build/Common.gmake
++++ syncterm-20141009/src/build/Common.gmake
+@@ -485,4 +485,6 @@ js:
+ 
+ $(CRYPT_LIB):  $(CRYPT_DEPS)
+ cl:
++ifndef WITHOUT_CRYPTLIB
+ 	$(MAKE) -C $(3RDPBUILDDIR) cryptlib
++endif
+\ No newline at end of file

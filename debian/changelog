@@ -1,4 +1,4 @@
-syncterm (20141009-1) unstable; urgency=medium
+syncterm (20141009+dfsg-1) unstable; urgency=medium
 
   * fix lintian keywords warning (upstream accepted)
   * fix clean rules to rebuild package
@@ -8,4 +8,4 @@ syncterm (20141009-1) unstable; urgency=medium
   * debug package should be extra priority (lintian)
   * Initial release (Closes: #739035) 
 
- -- Fernando Toledo <ragnarok@docksud.com.ar>  Sat, 15 Feb 2014 01:09:26 -0300
+ -- Fernando Toledo <ragnarok@docksud.com.ar>  Thu, 9 Oct 2014 01:09:26 -0300

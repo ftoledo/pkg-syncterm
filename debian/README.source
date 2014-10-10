@@ -3,6 +3,7 @@ syncterm for Debian
 
 SyncTerm is part of Synchronet BBS source code. It's depends of 3rd party libraries
 that are include in the release tarball.
+We strip the use of cryptlib from upstream source and disable the ssh protocol.
 
  -- Fernando Toledo <ragnarok@docksud.com.ar>  Sat, 15 Feb 2014 01:09:26 -0300
 

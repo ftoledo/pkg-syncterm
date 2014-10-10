@@ -32,14 +32,14 @@ endif
 
 %:
 	dh $@ 
-
+MAINT_FLAGS := WITH_SDL=1 WITHOUT_CRYPTLIB=1 DEBUG=1
 override_dh_auto_build:
-	$(MAKE) -C src/conio WITH_SDL=1 WIHTOUT_CRYPTLIB=1 DEBUG=1 
-	$(MAKE) -C src/xpdev WITH_SDL=1 WIHTOUT_CRYPTLIB=1 DEBUG=1 
-	$(MAKE) -C src/syncterm WITH_SDL=1 WIHTOUT_CRYPTLIB=1 DEBUG=1 
+	$(MAKE) -C src/conio $(MAINT_FLAGS) 
+	$(MAKE) -C src/xpdev $(MAINT_FLAGS) 
+	$(MAKE) -C src/syncterm $(MAINT_FLAGS) 
 
 override_dh_auto_install:
-	$(MAKE) -C src/syncterm PREFIX=$$(pwd)/debian/syncterm/usr MANPREFIX=$$(pwd)/debian/syncterm/usr/share install
+	$(MAKE) -C src/syncterm $(MAINT_FLAGS) PREFIX=$$(pwd)/debian/syncterm/usr MANPREFIX=$$(pwd)/debian/syncterm/usr/share install
 .PHONY: override_dh_strip
 
 override_dh_strip:
@@ -61,10 +61,20 @@ override_dh_auto_clean:
 	rm -f src/syncterm/syncterm.1.gz
 
 URL := 'http://syncterm.bbsdev.net/syncterm-src.tgz'
-
+DTYPE := +dfsg
 get-orig-source:
 	echo "Downloading..."
-	wget -q -O syncterm-src.tgz $(URL) 
-	UVERSION=$$(tar --exclude='*/*' -tf syncterm-src.tgz | sed -e "s/\///" |sed -e 's/-/_/'); \
+	wget -O syncterm-src.tgz $(URL) 
+	UVERSION=$$(tar --exclude='*/*' -tf syncterm-src.tgz | sed -e "s/\///"); \
 	echo "Found version: " $$UVERSION; \
-	mv syncterm-src.tgz $$UVERSION.orig.tar.gz
+	echo "Unpacking..."; \
+	tar xzf syncterm-src.tgz; \
+	echo "Remove Cryplib.zip..." ; \
+	rm $$UVERSION/3rdp/dist/cryptlib.zip ; \
+	DEBVERSION=$$(echo $$UVERSION | sed -e "s/-/_/"); \
+	echo "Repack sources..."; \
+	tar czf ../$$DEBVERSION$(DTYPE).orig.tar.gz $$UVERSION; \
+	echo "Cleanup files..."; \
+	rm syncterm-src.tgz; \
+	rm -rf $$UVERSION; \
+	echo "Done!"
