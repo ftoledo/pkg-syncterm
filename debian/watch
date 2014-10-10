@@ -1,3 +1,4 @@
 version=3
+opts=dversionmangle=s/\.dfsg// \
 http://syncterm.bbsdev.net/syncterm-src(.*)\.tgz
 
