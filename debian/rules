@@ -59,3 +59,12 @@ override_dh_auto_clean:
 	rm -rf src/xpdev/gcc.$(os).$(machine).obj.debug
 	rm -rf src/xpdev/gcc.$(os).$(machine).obj.debug-mt
 	rm -f src/syncterm/syncterm.1.gz
+
+URL := 'http://syncterm.bbsdev.net/syncterm-src.tgz'
+
+get-orig-source:
+	echo "Downloading..."
+	wget -q -O syncterm-src.tgz $(URL) 
+	UVERSION=$$(tar --exclude='*/*' -tf syncterm-src.tgz | sed -e "s/\///" |sed -e 's/-/_/'); \
+	echo "Found version: " $$UVERSION; \
+	mv syncterm-src.tgz $$UVERSION.orig.tar.gz
