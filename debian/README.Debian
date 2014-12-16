@@ -1,7 +1,8 @@
 syncterm for Debian
 -------------------
 
-First release, testing packaging into debian.
-This version was build without cryptlib due doubts that the license has code derivated from openssl.
+This version was built without cryptlib due license/copyright
+concerns. There is code suspected to be derived from OpenSSL.
+For more details see README.source
 
  -- Fernando Toledo <ragnarok@docksud.com.ar>  Sat, 15 Feb 2014 01:09:26 -0300

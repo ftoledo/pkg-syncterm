@@ -1,9 +1,19 @@
 syncterm for Debian
 -------------------
 
-SyncTerm is part of Synchronet BBS source code. It's depends of 3rd party libraries
-that are include in the release tarball.
-We strip the use of cryptlib from upstream source and disable the ssh protocol.
+SyncTerm is part of Synchronet BBS source code. It's depends of 3rd party 
+libraries that are include in the release tarball.
+We strip the use of cryptlib from upstream source and disable the ssh 
+protocol. 
+The source code of cryplib have suspects files that are derivted from 
+OpenSSL source code. 
+The strip concist on remove cryplib.zip from upstream tarball and 
+patch to disabled it on makefiles.
+
+References:
+
+[1] http://comments.gmane.org/gmane.comp.encryption.cryptlib/2529
+[2] https://www.debian-administration.org/users/dkg/weblog/74
 
  -- Fernando Toledo <ragnarok@docksud.com.ar>  Sat, 15 Feb 2014 01:09:26 -0300
 
