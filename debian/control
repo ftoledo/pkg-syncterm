@@ -3,7 +3,8 @@ Section: comm
 Priority: optional
 Maintainer: Fernando Toledo <ragnarok@docksud.com.ar>
 Build-Depends: debhelper (>= 9), libncurses5-dev (>= 5.9),
- unzip (>= 6.0), libsdl2-dev (>= 2.0.2), libsdl1.2-dev (>= 1.2.15)
+ unzip (>= 6.0), libsdl2-dev (>= 2.0.2), libsdl1.2-dev (>= 1.2.15), 
+ gcc (>= 4:4.9)
 Standards-Version: 3.9.6
 Homepage: http://syncterm.bbsdev.net/
 Vcs-Git: https://github.com/ftoledo/pkg-syncterm.git

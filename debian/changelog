@@ -1,5 +1,5 @@
-syncterm (20141022+dfsg-1) unstable; urgency=medium
+syncterm (20150327+dfsg-1) unstable; urgency=medium
 
   * Initial release (Closes: #739035) 
 
- -- Fernando Toledo <ragnarok@docksud.com.ar>  Wed, 22 Oct 2014 01:09:26 -0300
+ -- Fernando Toledo <ragnarok@docksud.com.ar>  Sun, 15 Mar 2015 01:03:34 -0300

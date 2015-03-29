@@ -4,8 +4,13 @@
 # Uncomment this to turn on verbose mode.
 export DH_VERBOSE=1
 
-CFLAGS = `dpkg-buildflags --get CFLAGS`
-CFLAGS += `dpkg-buildflags --get CPPFLAGS`
+#CFLAGS = `dpkg-buildflags --get CFLAGS`
+#CFLAGS += `dpkg-buildflags --get CPPFLAGS`
+
+CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
+CFLAGS:=$(shell dpkg-buildflags --get CFLAGS)
+CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS)
+LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS)
 
 gcc_machine   := $(shell ${CC} -dumpmachine)
 ifeq ($(gcc_machine),mingw32)
