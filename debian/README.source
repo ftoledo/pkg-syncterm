@@ -5,10 +5,10 @@ SyncTerm is part of Synchronet BBS source code. It's depends of 3rd party
 libraries that are include in the release tarball.
 We strip the use of cryptlib from upstream source and disable the ssh 
 protocol. 
-The source code of cryplib have suspects files that are derivted from 
+The source code of cryplib have suspects files that are derivated from 
 OpenSSL source code. 
-The strip concist on remove cryplib.zip from upstream tarball and 
-patch to disabled it on makefiles.
+The strip concist on remove cryplib.zip from upstream tarball 
+(from debian/copyright) and patch to disabled it on makefiles.
 
 References:
 
