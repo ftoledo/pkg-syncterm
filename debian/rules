@@ -65,21 +65,4 @@ override_dh_auto_clean:
 	rm -rf src/xpdev/gcc.$(os).$(machine).obj.debug-mt
 	rm -f src/syncterm/syncterm.1.gz
 
-URL := 'http://syncterm.bbsdev.net/syncterm-src.tgz'
-DTYPE := +dfsg
-get-orig-source:
-	echo "Downloading..."
-	wget -O syncterm-src.tgz $(URL) 
-	UVERSION=$$(tar --exclude='*/*' -tf syncterm-src.tgz | sed -e "s/\///"); \
-	echo "Found version: " $$UVERSION; \
-	echo "Unpacking..."; \
-	tar xzf syncterm-src.tgz; \
-	echo "Remove Cryplib.zip..." ; \
-	rm $$UVERSION/3rdp/dist/cryptlib.zip ; \
-	DEBVERSION=$$(echo $$UVERSION | sed -e "s/-/_/"); \
-	echo "Repack sources..."; \
-	tar czf ../$$DEBVERSION$(DTYPE).orig.tar.gz $$UVERSION; \
-	echo "Cleanup files..."; \
-	rm syncterm-src.tgz; \
-	rm -rf $$UVERSION; \
-	echo "Done!"
+

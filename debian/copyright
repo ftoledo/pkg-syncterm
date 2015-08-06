@@ -1,6 +1,7 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: syncterm
 Source: http://syncterm.bbsdev.net/
+Files-Excluded: 3rdp/dist/cryptlib.zip
 
 Files: *
 Copyright: Some parts of this program are covered under other licences.
