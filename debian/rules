@@ -65,4 +65,20 @@ override_dh_auto_clean:
 	rm -rf src/xpdev/gcc.$(os).$(machine).obj.debug-mt
 	rm -f src/syncterm/syncterm.1.gz
 
-
+DTYPE := +dfsg
+UVER  := $(shell dpkg-parsechangelog -SVersion| sed -re 's,.([0-9])+$$,,' | sed 's/+dfsg//')
+URL   := 'http://downloads.sourceforge.net/project/syncterm/syncterm/syncterm-$(UVER)/syncterm-$(UVER).tgz'
+CURDIR := 
+get-orig-source:
+	echo "Downloading..." ; \
+	wget -O syncterm-$(UVER).tgz $(URL) ; \
+	echo "Unpacking..."; \
+	tar xzf syncterm-$(UVER).tgz ; \
+	echo "Remove Cryplib.zip..." ; \
+	rm syncterm-$(UVER)/3rdp/dist/cryptlib.zip ; \
+	echo "Repack sources..."; \
+	tar czf ../syncterm_$(UVER)$(DTYPE).orig.tar.gz syncterm-$(UVER); \
+	echo "Cleanup files..."; \
+	rm syncterm-$(UVER).tgz; \
+	rm -rf syncterm-$(UVER); \
+	echo "Done!"
