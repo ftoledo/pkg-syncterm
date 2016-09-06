@@ -3,12 +3,7 @@ Description: Disable cryptlib
  To avoid license problems we strip cryptlib from original source and build
  SyncTerm without it.
 Author: Fernando Toledo <ragnarok@docksud.com.ar>
-
 ---
-The information above should follow the Patch Tagging Guidelines, please
-checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
-are templates for supplementary fields that you might want to add:
-
 --- syncterm-20141009.orig/3rdp/build/Common.gmake
 +++ syncterm-20141009/3rdp/build/Common.gmake
 @@ -47,9 +47,10 @@ endif
