@@ -3,9 +3,20 @@ Upstream-Name: syncterm
 Source: http://syncterm.bbsdev.net/
 Files-Excluded: 3rdp/dist/cryptlib.zip
 
-Files: *
-Copyright: Some parts of this program are covered under other licences.
-License: LGPL
+Files: src/syncterm/*
+Copyright: 2009 Rob Swindell http://www.synchro.net/copyright.html
+           2007 Stephen Hurd            
+License: GPL-2
+
+Files: src/comio/*
+       src/conio/*
+       src/smblib/*
+       src/uifc/*
+       src/xpdev/*
+       src/sbbs/*
+Copyright: 2009 Rob Swindell http://www.synchro.net/copyright.html
+           2007 Stephen Hurd            
+License: LGPL-2.1
  The files in the comio, conio, smblib, uifc, and xpdev are covered under
  the LGPL.
  .
@@ -13,24 +24,23 @@ License: LGPL
  zmtx/zmrx package available at
  ftp://ftp.netsw.org/net/modem/protocols/zmodem/zmtx-zmrx/
  .
- The licence contained in the archive is:
+ Fontunely, Jacques Mattheij transfer all copyright to SyncTerm developer!
+ Date: Thu, 19 Nov 2015 10:10:02 +0100
+ From: Jacques Mattheij
+ Subject: Re: zmodem license
+ To: Stephen Hurd, Fernando Toledo
+ CC: Rob Swindell
  .
- MCS allows you to use and copy/modify this source under the following
- conditions:
+ Hello there to all of you,
  .
-  - MCS or Jacques Mattheij shall not be liable for any damages arising
-    from the use of this code
-  - the archive must be distributed as a whole leaving version numbers intact.
-    please do not distribute modifications; mail them back to us for inclusion
-    in the next release which should follow each other fairly quickly in
-    the beginning
-  - you will not use this software for commercial purposes.
-    (commercial licenses are available contact us for info)
- .
- As such, this program may not be redistributable.  YOU HAVE BEEN WARNED!
- .
- If anyone can put me (shurd@sasktel.net) in contact with the authours,
- that would be greatly appreciated.
+ So, this email will then signify as the transfer of any and all rights I
+ held up to this point with relation to the copyright of the zmodem
+ package as released by me many years ago and all associated files to
+ Stephen Hurd. Fernando Toledo and Rob Swindell are named as
+ witnesses to this transfer.
+
+Files: src/build/mkdep
+License: BSD
 
 Files: debian/*
 Copyright: 2014 Fernando Toledo <ragnarok@docksud.com.ar>
